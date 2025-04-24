@@ -1,0 +1,7 @@
+__init__.py
+.env
+/venv/
+.codegpt
+__init__
+__pycache__
+trial.py
