@@ -15,7 +15,7 @@ from tools.tavily import tavily
 
 load_dotenv()
 
-llm = ChatGroq(model="meta-llama/llama-4-maverick-17b-128e-instruct", temperature=0.2)
+llm = ChatGroq(model="meta-llama/llama-4-scout-17b-16e-instruct", temperature=0.2)
 
 tools = [wikipedia, arxiv, scholar, tavily]
 
