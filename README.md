@@ -61,7 +61,7 @@ This specialized agent decomposition a significant advancement over monolithic s
 
   - [Groq](https://groq.com/) - Primary LLM provider for all agents, selected for its optimal balance of performance and cost
   - Models Used:
-    - `meta-llama/llama-4-maverick-17b-128e-instruct` - Optimized for research tasks with strong reasoning capabilities
+    - `meta-llama/llama-4-scout-17b-16e-instruct` - Optimized for research tasks with strong reasoning capabilities
     - `deepseek-r1-distill-llama-70b` - Selected for content synthesis and drafting with excellent writing abilities
     - `llama-3.3-70b-versatile` - Chosen for final content enhancement with superior language quality
 
@@ -194,7 +194,7 @@ Deep-Research-Agentic-AI/
 
 The system uses different AI models for different agents. You can customize these in the respective agent files:
 
-- `researcher.py` - Uses `meta-llama/llama-4-maverick-17b-128e-instruct` by default for optimal research capabilities
+- `researcher.py` - Uses `meta-llama/llama-4-scout-17b-16e-instruct` by default for optimal research capabilities
 - `drafter.py` - Uses `deepseek-r1-distill-llama-70b` by default for high-quality content drafting
 - `enhancer.py` - Uses `llama-3.3-70b-versatile` by default for superior content enhancement
 
