@@ -16,7 +16,7 @@ def scholar_search(query: str) -> str:
     return scholar_api.run(query)
 
 scholar = Tool(
-    name="Arxiv Search",
+    name="Google Scholar Search",
     func= scholar_search,
-    description="Search academic papers from Arxiv"
+    description="Search academic papers from Google Scholar"
 )
