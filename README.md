@@ -277,30 +277,34 @@ Add new tools to the `tools/` directory following the pattern of existing tools:
 2. Implement your tool using LangChain's tool framework:
 
    ```python
-   from langchain.tools import BaseTool
+      from langchain.tools import BaseToolAPIWrapper
+      from langchain_core.tools import Tool
 
-   class MyNewTool(BaseTool):
-       name = "my_new_tool"
-       description = "Searches for specialized information in [source]"
+      # --- Tool Setup ---                             # Check documentation of tools to configure the tool
+      base_tool_api = BaseToolAPIWrapper(
+         parameter1=x,
+         parameter2=y,
+         parameter3=z,
+      )
 
-       def _run(self, query: str) -> str:
-           # Your implementation here
-           pass
+      def base_tool_search(query: str) -> str:
+         return base_tool_api.run(query)
+
+      myNewTool = Tool(                               # Check documentation of tools to configure the tool
+         name="Base Tool Search",
+         func=base_tool_search,
+         description="Search the results from Base Tool"
+      )
+
    ```
 
 3. Import and add your tool to the list in `researcher.py`:
 
    ```python
-   from tools.my_tool import MyNewTool
+   from tools.my_tool import myNewTool
 
    # In the tools list
-   tools = [
-       WikipediaTool(),
-       ArxivTool(),
-       ScholarTool(),
-       TavilyTool(),
-       MyNewTool(),  # Your new tool
-   ]
+   tools = [wikipedia, arxiv, scholar, tavily, myNewTool, ] # Add your new tool here
    ```
 
 ## Future Enhancements
