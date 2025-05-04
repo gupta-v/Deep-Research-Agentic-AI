@@ -95,7 +95,7 @@ with col_chat:
 
 # ---- Logs Column ----
 with col_logs:
-    st.subheader("🪵 CLI-Style Agent Logs")
+    st.subheader("🪵Agent Logs")
     
     # Display the raw CLI output
     if st.session_state.cli_logs:

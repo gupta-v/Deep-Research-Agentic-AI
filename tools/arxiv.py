@@ -18,5 +18,5 @@ def arxiv_search(query: str) -> str:
 arxiv = Tool(
     name="Arxiv Search",
     func=arxiv_search,
-    description="Search academic papers from Arxiv"
+    description="Search the web for general information and recent trends."
 )
